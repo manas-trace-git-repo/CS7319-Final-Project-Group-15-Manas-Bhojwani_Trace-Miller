@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backg"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- EditText for city name input -->
+    <EditText
+        android:id="@+id/city_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Enter a city's name"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Button to trigger the display action -->
+    <Button
+        android:id="@+id/display_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Display"
+        android:background="#0070c7"
+        android:textColor="@android:color/white"
+        android:onClick="WeatherData"
+        app:backgroundTint="@null"
+        android:layout_marginBottom="10dp" />
+
+    <!-- ImageView for displaying weather condition images -->
+    <ImageView
+        android:id="@+id/weather_condition_image"
+        android:layout_width="340dp"
+        android:layout_height="124dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/weather_logo" />
+
+    <!-- ScrollView for displaying results, resized to make room for ImageView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/results_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </ScrollView>
+
+</LinearLayout>
